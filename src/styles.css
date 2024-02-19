@@ -51,7 +51,7 @@ a {
   height: 100%;
   border-radius: var(--borderRadius) - var(--borderRadius);
   background-color: rgb(2, 1, 1);
-  background-image: url("./assets/foto-removebg.png");
+  background-image: url("./assets/foto_animation.gif");
   background-size: cover; /* Adjust the size of the background image */
   justify-content: left;
 }
@@ -68,8 +68,9 @@ a {
   z-index: -1;
   background-image: linear-gradient(0, red, blue);
   top: calc(-1 * var(--borderSize)); /* Corrected top position */
-  left: calc(-1 * var(--borderSize)); /* Corrected left position */
-  border-radius: var(--borderRadius);
+  right: calc(-1 * var(--borderSize)); /* Corrected left position */
+
+  border-radius: var(--borderRadius - var(--border));
   background-size: 100% 200%;
   background-position: top;
   animation: move 2.5s infinite alternate linear;
