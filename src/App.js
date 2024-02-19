@@ -14,6 +14,16 @@ function Header() {
       <Link
         to="/"
         onClick={() => {
+          let home = document.getElementById("home");
+          home && home.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      >
+        Home
+      </Link>
+
+      <Link
+        to="/"
+        onClick={() => {
           let resume = document.getElementById("resume");
           resume &&
             resume.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -41,6 +51,17 @@ function Header() {
         Contact
       </Link>
     </>
+  );
+}
+
+function Home() {
+  return (
+    <section id="home">
+      <h1>Home Section</h1>
+      <div className="card">
+        <div className="content"></div>
+      </div>
+    </section>
   );
 }
 
@@ -74,6 +95,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+        <Home />
         <Resume />
         <About />
         <Contact />
