@@ -57,9 +57,13 @@ function Header() {
 function Home() {
   return (
     <section id="home">
-      <h1>Home Section</h1>
+      <div className="Hometitle">
+        <h1>Home Section</h1>
+      </div>
       <div className="card">
-        <div className="content"></div>
+        <div className="content">
+          <div className="content-image"></div>
+        </div>
       </div>
     </section>
   );
@@ -67,7 +71,7 @@ function Home() {
 
 function Resume() {
   return (
-    <section id="resume">
+    <section id="resume" className="overlay">
       <h1>Resume Section</h1>
     </section>
   );
@@ -75,16 +79,15 @@ function Resume() {
 
 function About() {
   return (
-    <section id="about">
+    <section id="about" className="overlay">
       <h1>About Section</h1>
-      <></>
     </section>
   );
 }
 
 function Contact() {
   return (
-    <section id="contact">
+    <section id="contact" className="overlay">
       <h1>Contact Section</h1>
     </section>
   );
